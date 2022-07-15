@@ -12,3 +12,107 @@ function countdown(n){
 
 }console.log(countup(7));
 // Only change code above this line
+
+
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//RANGO DE NUMEROS
+
+function rangeOfNumbers(startNum, endNum) {
+  if (endNum < startNum) {
+      return [];
+    } else {
+      const num = rangeOfNumbers(startNum,endNum-1);
+      num.push(endNum);
+      return num;
+    }
+  };
+
+  
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//SUMA TODOS LOS IMPARES
+
+function sumaTodosImpares(array) {
+  return array.reduce((acc,elemento) => (elemento % 2 !== 0 ? acc + elemento : acc),0);
+}
+
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+//STRING MAS LARGO
+function stringMasLarga(str) {
+  const arr = str.split(' ');
+  let palabramaslarga = '';
+  for (let i = 0; i < arr.length ;i++) {
+    if (arr[i].length>palabramaslarga.length) {
+      palabramaslarga = arr[i];
+          }
+  }
+  console.log(palabramaslarga);
+}
+stringMasLarga('ss ddddddddddddd')
+
+  function stringMasLarga(strings) {
+  let palabras = strings.split(' ');
+  //let palabras = ['mucho', 'muchomuchomuchomuchoa', 'muchomucho', 'muchomuchomucho'];
+  let palabra = palabras.reduce((acc, val) => (acc.length > val.length ? acc : val),'' );
+  console.log(palabra);}
+
+
+
+
+  const palabraMasLarga = cadena => {
+    // https://parzibyte.me/blog
+    // Separar por espacios
+    const separadaPorEspacios = cadena.split(" ");
+    // Suponer que la palabra más larga es la primera, para poder inicializar la variable
+    let palabraMasLarga = separadaPorEspacios[0];
+    // Recorrer e ir comparando
+    for (let palabra of separadaPorEspacios) {
+        if (palabra.length >= palabraMasLarga.length) {
+            palabraMasLarga = palabra;
+        }
+    }
+    return palabraMasLarga;
+};
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+// ESTA LA PROPIEDAD DENTRO DEL OBJETO?
+
+var usuarios = [
+  {
+  nombre:'Gaston',
+  online:true
+  },
+{
+  nombre:'Robert',
+  online:false
+}];
+
+
+function estaOffline(usuarios,nombre) {
+  const listofresults = usuarios.filter(usuario => usuario.nombre == nombre);
+  console.log(listofresults);
+  const fish = listofresults[0].online;
+  return fish;
+}
+
+
+function estaOffline(usuarios,nombre) {
+  let users = {};
+  usuarios.map((usuario) => (users[usuario.nombre] = usuario.online))
+  return users[nombre]
+}
+
+
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+//PROPIEDADES EN COMUN 
+
+function actividadesEnComun(persona1,persona2) {
+
+  
+}
