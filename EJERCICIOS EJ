@@ -1,0 +1,14 @@
+//COUNTDOWN
+
+// Only change code below this line
+function countdown(n){
+  if (n<1){
+    return [];
+  } else {
+    const cc = countdown(n-1);
+    cc.unshift(n);
+    return cc;
+  }
+
+}console.log(countup(7));
+// Only change code above this line
